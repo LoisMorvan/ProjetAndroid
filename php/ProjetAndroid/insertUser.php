@@ -1,11 +1,11 @@
 <?php 
 try {
     // Connexion à la base de données MySql
-    $db="resto2_lmorvan";
+    $db="morvan_resto_pj2";
     $dbhost="localhost";
     $dbport=3308;
-    $dbuser="root";
-    $dbpasswd="";
+    $dbuser="morvan";
+    $dbpasswd="J04VT";
     
     $connexion = new PDO('mysql:host='.$dbhost.';port='.$dbport.';dbname='.$db.'', $dbuser, $dbpasswd);
     $connexion->exec("SET CHARACTER SET utf8");

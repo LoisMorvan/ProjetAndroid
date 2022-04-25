@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         OkHttpClient httpResto = new OkHttpClient();
 
         //prépare la requête
-        Request requestRestos = new Request.Builder().url("http://192.168.1.99/projetAndroid/listViewResto.php").build();
+        Request requestRestos = new Request.Builder().url("http://http://10.15.253.250/morvan/projetAndroid/listViewResto.php").build();
         //exécution de cette requête
         httpResto.newCall(requestRestos).enqueue(new Callback() {
             @Override

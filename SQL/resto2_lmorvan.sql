@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `aimer` (
   `idU` bigint(20) NOT NULL,
   PRIMARY KEY (`idR`,`idU`),
   KEY `aimer_ibfk_2` (`idU`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `aimer`
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `critiquer` (
   `idU` bigint(20) NOT NULL,
   PRIMARY KEY (`idR`,`idU`),
   KEY `critiquer_ibfk_2` (`idU`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `critiquer`
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `photo` (
   `idR` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`idP`),
   KEY `idR` (`idR`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `photo`
@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `preferer` (
   PRIMARY KEY (`idTC`,`idU`),
   KEY `idTC` (`idTC`),
   KEY `preferer_ibfk_1` (`idU`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `preferer`
@@ -184,7 +184,7 @@ CREATE TABLE IF NOT EXISTS `proposer` (
   `idTC` bigint(20) NOT NULL,
   PRIMARY KEY (`idR`,`idTC`),
   KEY `idTC` (`idTC`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `proposer`
@@ -219,7 +219,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   PRIMARY KEY (`idResa`),
   KEY `idResto` (`idResto`),
   KEY `idUtil` (`idUtil`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -240,7 +240,7 @@ CREATE TABLE IF NOT EXISTS `resto` (
   `descR` text,
   `horairesR` text,
   PRIMARY KEY (`idR`)
-) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `resto`
@@ -270,7 +270,7 @@ CREATE TABLE IF NOT EXISTS `typecuisine` (
   `idTC` bigint(20) NOT NULL AUTO_INCREMENT,
   `libelleTC` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`idTC`)
-) ENGINE=InnoDB AUTO_INCREMENT=135 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=135 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `typecuisine`
@@ -303,7 +303,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `admin` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`idU`),
   UNIQUE KEY `mailU` (`mailU`)
-) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `utilisateur`

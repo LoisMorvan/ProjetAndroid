@@ -24,7 +24,7 @@ public class Connexion_activity extends AppCompatActivity {
 
     private EditText editTextEmail, editTextPassword;
     private String email, password;
-    private String URL = "http://192.168.1.99/projetAndroid/loginUser.php";
+    private String URL = "http://10.15.253.250/morvan/projetAndroid/loginUser.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

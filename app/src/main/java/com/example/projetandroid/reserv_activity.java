@@ -48,7 +48,7 @@ public class reserv_activity extends AppCompatActivity implements DatePickerDial
     private Button btnChoose, btnReserv;
     private int day, month, year, hour, minute;
     private String myday, myMonth, myYear, myHour, myMinute, dateTime, idResto, idUtil;
-    private String URL = "http://192.168.1.99/projetAndroid/insertReserv.php";
+    private String URL = "http://10.15.253.250/morvan/projetAndroid/insertReserv.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +98,7 @@ public class reserv_activity extends AppCompatActivity implements DatePickerDial
             OkHttpClient httpResto = new OkHttpClient();
 
             //prépare la requête
-            Request requestRestos = new Request.Builder().url("http://192.168.1.99/projetAndroid/unResto.php?idResto=" + idResto).build();
+            Request requestRestos = new Request.Builder().url("http://10.15.253.250/morvan/projetAndroid/unResto.php?idResto=" + idResto).build();
             //exécution de cette requête
             httpResto.newCall(requestRestos).enqueue(new Callback() {
                 @Override

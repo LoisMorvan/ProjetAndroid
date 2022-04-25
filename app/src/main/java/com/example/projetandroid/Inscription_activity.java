@@ -27,7 +27,7 @@ public class Inscription_activity extends AppCompatActivity {
     private EditText editTextPseudo, editTextEmail, editTextPassword, editTextReenterPassword;
     private TextView textViewStatus;
     private Button btnRegister;
-    private String URL = "http://192.168.1.99/projetAndroid/insertUser.php";
+    private String URL = "http://10.15.253.250/morvan/projetAndroid/insertUser.php";
     private String pseudo, email, password, reenterPassword;
 
 
