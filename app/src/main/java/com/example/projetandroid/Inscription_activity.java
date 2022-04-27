@@ -27,7 +27,7 @@ public class Inscription_activity extends AppCompatActivity {
     private EditText editTextPseudo, editTextEmail, editTextPassword, editTextReenterPassword;
     private TextView textViewStatus;
     private Button btnRegister;
-    private String URL = "http://10.15.253.250/morvan/projetAndroid/insertUser.php";
+    private String addresseServeur = "http://10.15.253.250/morvan/projetAndroid/";
     private String pseudo, email, password, reenterPassword;
 
 
@@ -53,7 +53,7 @@ public class Inscription_activity extends AppCompatActivity {
             Toast.makeText(this, "Le mot de passe ne correspond pas", Toast.LENGTH_SHORT).show();
         }
         else if(!pseudo.equals("") && !email.equals("") && !password.equals("")){
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, addresseServeur + "insertUser.php", new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
                     Log.d("res", response);

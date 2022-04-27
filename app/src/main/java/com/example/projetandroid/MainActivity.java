@@ -30,6 +30,8 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
 
+    private String addresseServeur = "http://10.15.253.250/morvan/projetAndroid/";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         OkHttpClient httpResto = new OkHttpClient();
 
         //prépare la requête
-        Request requestRestos = new Request.Builder().url("http://http://10.15.253.250/morvan/projetAndroid/listViewResto.php").build();
+        Request requestRestos = new Request.Builder().url(addresseServeur + "listViewResto.php").build();
         //exécution de cette requête
         httpResto.newCall(requestRestos).enqueue(new Callback() {
             @Override

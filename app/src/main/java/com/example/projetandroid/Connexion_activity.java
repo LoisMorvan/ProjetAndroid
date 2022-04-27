@@ -24,7 +24,7 @@ public class Connexion_activity extends AppCompatActivity {
 
     private EditText editTextEmail, editTextPassword;
     private String email, password;
-    private String URL = "http://10.15.253.250/morvan/projetAndroid/loginUser.php";
+    private String addresseServeur = "http://10.15.253.250/morvan/projetAndroid/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class Connexion_activity extends AppCompatActivity {
         email = editTextEmail.getText().toString().trim();
         password = editTextPassword.getText().toString().trim();
         if(!email.equals("") && !password.equals("")){
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, addresseServeur + "loginUser.php", new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
                     Log.d("res", response);
